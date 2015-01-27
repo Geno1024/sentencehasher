@@ -19,10 +19,13 @@
 
 		<EditText
 			android:layout_height="wrap_content"
-			android:ems="10"
+			android:ems="32"
 			android:id="@+id/md5in"
 			android:textColor="#FF000000"
-			android:layout_width="wrap_content"/>
+			android:layout_width="match_parent"
+			android:textIsSelectable="true"
+			android:typeface="monospace"
+			android:textSize="12sp"/>
 
 	</TableRow>
 
@@ -39,13 +42,16 @@
 
 		<EditText
 			android:layout_height="wrap_content"
-			android:ems="10"
+			android:ems="32"
 			android:id="@+id/sha1in"
 			android:textColor="#FF000000"
-			android:layout_width="wrap_content"/>
+			android:layout_width="match_parent"
+			android:textIsSelectable="true"
+			android:typeface="monospace"
+			android:textSize="12sp"/>
 
 	</TableRow>
-	
+
 	<LinearLayout
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
@@ -65,8 +71,8 @@
 			android:layout_width="match_parent"
 			android:textColor="#000000"
 			android:id="@+id/calc"/>
-		
-		</LinearLayout>
+
+	</LinearLayout>
 
 </TableLayout>
 
