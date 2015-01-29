@@ -3,5 +3,6 @@
 	<string name="app_name">句子加密器</string>
 	<string name="md5">MD5</string>
 	<string name="sha1">SHA-1</string>
+	<string name="sha256">SHA-256</string>
 	<string name="calc">Go!</string>
 </resources>
