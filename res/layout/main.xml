@@ -15,14 +15,13 @@
 			android:id="@+id/md5"
 			android:layout_width="wrap_content"/>
 
-		<EditText
+		<TextView
 			android:layout_height="wrap_content"
-			android:ems="32"
+			android:ems="16"
 			android:id="@+id/md5in"
 			android:layout_width="match_parent"
 			android:textIsSelectable="false"
-			android:typeface="monospace"
-			android:textSize="12sp"/>
+			android:typeface="monospace"/>
 
 	</TableRow>
 
@@ -36,14 +35,13 @@
 			android:id="@+id/sha1"
 			android:layout_width="wrap_content"/>
 
-		<EditText
+		<TextView
 			android:layout_height="wrap_content"
-			android:ems="32"
+			android:ems="16"
 			android:id="@+id/sha1in"
 			android:layout_width="match_parent"
 			android:textIsSelectable="false"
-			android:typeface="monospace"
-			android:textSize="12sp"/>
+			android:typeface="monospace"/>
 
 	</TableRow>
 
@@ -57,14 +55,13 @@
 			android:id="@+id/sha256"
 			android:layout_width="wrap_content"/>
 
-		<EditText
+		<TextView
 			android:layout_height="wrap_content"
-			android:ems="32"
+			android:ems="16"
 			android:id="@+id/sha256in"
 			android:layout_width="match_parent"
 			android:textIsSelectable="false"
-			android:typeface="monospace"
-			android:textSize="12sp"/>
+			android:typeface="monospace"/>
 
 	</TableRow>
 
@@ -78,14 +75,13 @@
 			android:id="@+id/sha384"
 			android:layout_width="wrap_content"/>
 
-		<EditText
+		<TextView
 			android:layout_height="wrap_content"
-			android:ems="32"
+			android:ems="16"
 			android:id="@+id/sha384in"
 			android:layout_width="match_parent"
 			android:textIsSelectable="false"
-			android:typeface="monospace"
-			android:textSize="12sp"/>
+			android:typeface="monospace"/>
 
 	</TableRow>
 
@@ -99,14 +95,13 @@
 			android:id="@+id/sha512"
 			android:layout_width="wrap_content"/>
 
-		<EditText
+		<TextView
 			android:layout_height="wrap_content"
-			android:ems="32"
+			android:ems="16"
 			android:id="@+id/sha512in"
 			android:layout_width="match_parent"
 			android:textIsSelectable="false"
-			android:typeface="monospace"
-			android:textSize="12sp"/>
+			android:typeface="monospace"/>
 
 	</TableRow>
 
@@ -118,7 +113,6 @@
 		<EditText
 			android:layout_height="wrap_content"
 			android:inputType="textMultiLine"
-			android:ems="10"
 			android:id="@+id/text"
 			android:layout_width="match_parent"/>
 

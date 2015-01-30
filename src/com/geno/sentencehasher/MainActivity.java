@@ -12,7 +12,7 @@ import java.security.*;
 public class MainActivity extends Activity
 {
 	public TextView md5,sha1,sha256,sha384,sha512,avail;
-	public EditText md5in,sha1in,sha256in,sha384in,sha512in,text;
+	public TextView md5in,sha1in,sha256in,sha384in,sha512in,text;
 	public Button calc;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -24,19 +24,19 @@ public class MainActivity extends Activity
 		avail.setText(getString(R.string.intro)+"\n"+getString(R.string.avail)+Security.getAlgorithms("MessageDigest"));
 
 		md5=(TextView)findViewById(R.id.md5);
-		md5in=(EditText)findViewById(R.id.md5in);
+		md5in=(TextView)findViewById(R.id.md5in);
 
 		sha1=(TextView)findViewById(R.id.sha1);
-		sha1in=(EditText)findViewById(R.id.sha1in);
+		sha1in=(TextView)findViewById(R.id.sha1in);
 
 		sha256=(TextView)findViewById(R.id.sha256);
-		sha256in=(EditText)findViewById(R.id.sha256in);
+		sha256in=(TextView)findViewById(R.id.sha256in);
 
 		sha384=(TextView)findViewById(R.id.sha384);
-		sha384in=(EditText)findViewById(R.id.sha384in);
+		sha384in=(TextView)findViewById(R.id.sha384in);
 
 		sha512=(TextView)findViewById(R.id.sha512);
-		sha512in=(EditText)findViewById(R.id.sha512in);
+		sha512in=(TextView)findViewById(R.id.sha512in);
 
 		text=(EditText)findViewById(R.id.text);
 
@@ -108,7 +108,7 @@ public class MainActivity extends Activity
 		);
 	}
 
-	void clip(EditText t)
+	void clip(TextView t)
 	{
 		android.content.ClipboardManager cm = (android.content.ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
 		cm.setText(t.getText().toString());
