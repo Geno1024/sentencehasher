@@ -3,7 +3,6 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="match_parent"
 	android:layout_width="match_parent"
-	android:background="#FFFFFFFF"
 	android:id="@+id/back">
 
 	<TableRow
@@ -14,16 +13,14 @@
 			android:layout_height="wrap_content"
 			android:text="@string/md5"
 			android:id="@+id/md5"
-			android:layout_width="wrap_content"
-			android:textColor="#FF000000"/>
+			android:layout_width="wrap_content"/>
 
 		<EditText
 			android:layout_height="wrap_content"
 			android:ems="32"
 			android:id="@+id/md5in"
-			android:textColor="#FF000000"
 			android:layout_width="match_parent"
-			android:textIsSelectable="true"
+			android:textIsSelectable="false"
 			android:typeface="monospace"
 			android:textSize="12sp"/>
 
@@ -37,20 +34,19 @@
 			android:layout_height="wrap_content"
 			android:text="@string/sha1"
 			android:id="@+id/sha1"
-			android:layout_width="wrap_content"
-			android:textColor="#FF000000"/>
+			android:layout_width="wrap_content"/>
 
 		<EditText
 			android:layout_height="wrap_content"
 			android:ems="32"
 			android:id="@+id/sha1in"
-			android:textColor="#FF000000"
 			android:layout_width="match_parent"
-			android:textIsSelectable="true"
+			android:textIsSelectable="false"
 			android:typeface="monospace"
 			android:textSize="12sp"/>
 
 	</TableRow>
+
 	<TableRow
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content">
@@ -59,20 +55,61 @@
 			android:layout_height="wrap_content"
 			android:text="@string/sha256"
 			android:id="@+id/sha256"
-			android:layout_width="wrap_content"
-			android:textColor="#FF000000"/>
+			android:layout_width="wrap_content"/>
 
 		<EditText
 			android:layout_height="wrap_content"
 			android:ems="32"
 			android:id="@+id/sha256in"
-			android:textColor="#FF000000"
 			android:layout_width="match_parent"
-			android:textIsSelectable="true"
+			android:textIsSelectable="false"
 			android:typeface="monospace"
 			android:textSize="12sp"/>
 
 	</TableRow>
+
+	<TableRow
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/sha384"
+			android:id="@+id/sha384"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="32"
+			android:id="@+id/sha384in"
+			android:layout_width="match_parent"
+			android:textIsSelectable="false"
+			android:typeface="monospace"
+			android:textSize="12sp"/>
+
+	</TableRow>
+
+	<TableRow
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/sha512"
+			android:id="@+id/sha512"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="32"
+			android:id="@+id/sha512in"
+			android:layout_width="match_parent"
+			android:textIsSelectable="false"
+			android:typeface="monospace"
+			android:textSize="12sp"/>
+
+	</TableRow>
+
 	<LinearLayout
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
@@ -83,15 +120,18 @@
 			android:inputType="textMultiLine"
 			android:ems="10"
 			android:id="@+id/text"
-			android:textColor="#FF000000"
 			android:layout_width="match_parent"/>
 
 		<Button
 			android:layout_height="wrap_content"
 			android:text="@string/calc"
 			android:layout_width="match_parent"
-			android:textColor="#000000"
 			android:id="@+id/calc"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/avail"/>
 
 	</LinearLayout>
 
