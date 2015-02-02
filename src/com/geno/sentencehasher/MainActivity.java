@@ -13,6 +13,7 @@ public class MainActivity extends Activity
 {
 	public TextView md5,sha1,sha256,sha384,sha512,avail;
 	public TextView md5in,sha1in,sha256in,sha384in,sha512in,text;
+	public TextWatcher intext;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -39,7 +40,7 @@ public class MainActivity extends Activity
 
 		text=(EditText)findViewById(R.id.text);
 
-		TextWatcher tw = new TextWatcher() 
+		intext=new TextWatcher() 
 		{
 			@Override public void onTextChanged(CharSequence s,int start,int before,int count){}
 
@@ -56,7 +57,7 @@ public class MainActivity extends Activity
 			}
 		};
 
-		text.addTextChangedListener(tw);
+		text.addTextChangedListener(intext);
 
 		md5in.setOnClickListener
 		(new OnClickListener()
