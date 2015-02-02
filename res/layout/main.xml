@@ -112,15 +112,9 @@
 
 		<EditText
 			android:layout_height="wrap_content"
-			android:inputType="textMultiLine"
+			android:inputType="textImeMultiLine|textMultiLine"
 			android:id="@+id/text"
 			android:layout_width="match_parent"/>
-
-		<Button
-			android:layout_height="wrap_content"
-			android:text="@string/calc"
-			android:layout_width="match_parent"
-			android:id="@+id/calc"/>
 
 		<TextView
 			android:layout_height="wrap_content"

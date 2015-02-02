@@ -13,7 +13,6 @@ public class MainActivity extends Activity
 {
 	public TextView md5,sha1,sha256,sha384,sha512,avail;
 	public TextView md5in,sha1in,sha256in,sha384in,sha512in,text;
-	public Button calc;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -40,22 +39,25 @@ public class MainActivity extends Activity
 
 		text=(EditText)findViewById(R.id.text);
 
-		calc=(Button)findViewById(R.id.calc);
+		TextWatcher tw = new TextWatcher() 
+		{
+			@Override public void onTextChanged(CharSequence s,int start,int before,int count){}
 
-		calc.setOnClickListener
-		(new OnClickListener()
+			@Override public void beforeTextChanged(CharSequence s,int start,int count,int after){}
+
+			@Override
+			public void afterTextChanged(Editable s)
 			{
-				@Override
-				public void onClick(View p1)
-				{
-					md5in.setText(hash(text.getText().toString(),"MD5").toUpperCase());
-					sha1in.setText(hash(text.getText().toString(),"SHA1").toUpperCase());
-					sha256in.setText(hash(text.getText().toString(),"SHA256").toUpperCase());
-					sha384in.setText(hash(text.getText().toString(),"SHA384").toUpperCase());
-					sha512in.setText(hash(text.getText().toString(),"SHA512").toUpperCase());
-				}
+			md5in.setText(hash(text.getText().toString(),"MD5").toUpperCase());
+			sha1in.setText(hash(text.getText().toString(),"SHA1").toUpperCase());
+			sha256in.setText(hash(text.getText().toString(),"SHA256").toUpperCase());
+			sha384in.setText(hash(text.getText().toString(),"SHA384").toUpperCase());
+			sha512in.setText(hash(text.getText().toString(),"SHA512").toUpperCase());
 			}
-		);
+		};
+
+		text.addTextChangedListener(tw);
+
 		md5in.setOnClickListener
 		(new OnClickListener()
 			{

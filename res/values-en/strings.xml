@@ -9,5 +9,4 @@
 	<string name="copied">Copied!</string>
 	<string name="avail">The hash function available on this Android are:</string>
 	<string name="intro">This application has ONLY one function:calculate hash for sentences.\nYou should know that hash function is just a one-way function.\nIf you found any function exists in the available list but not the result list above, please tell me.</string>
-	<string name="calc">Go!</string>
 </resources>
