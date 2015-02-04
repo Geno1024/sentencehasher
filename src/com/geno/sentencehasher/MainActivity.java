@@ -117,7 +117,7 @@ public class MainActivity extends Activity
 
 	void clip(TextView t)
 	{
-		android.content.ClipboardManager cm = (android.content.ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+		android.content.ClipboardManager cm=(android.content.ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
 		cm.setText(t.getText().toString());
 		Toast.makeText(this,getString(R.string.copied),Toast.LENGTH_SHORT).show();
 	}
@@ -127,27 +127,27 @@ public class MainActivity extends Activity
 		MessageDigest hashcode = null;
 		try
 		{
-			hashcode = MessageDigest.getInstance(algorithm);
+			hashcode=MessageDigest.getInstance(algorithm);
 		}
 		catch(Exception e)
-		{  
-			e.printStackTrace();
-		}  
-
-		char[] charArray = str.toCharArray();
-		byte[] byteArray = new byte[charArray.length];
-
-		for(int i = 0; i < charArray.length; i++)
 		{
-			byteArray[i] = (byte)charArray[i];
+				e.printStackTrace();
 		}
-		byte[] hashBytes = hashcode.digest(byteArray);
 
-		StringBuffer hexValue = new StringBuffer();
-		for( int i = 0; i < hashBytes.length; i++)
+		char[] charArray=str.toCharArray();
+		byte[] byteArray=new byte[charArray.length];
+
+		for(int i=0;i<charArray.length;i++)
 		{
-			int val = ((int)hashBytes[i])&0xff;
-			if(val < 16)
+			byteArray[i]=(byte)charArray[i];
+		}
+		byte[] hashBytes=hashcode.digest(byteArray);
+
+		StringBuffer hexValue=new StringBuffer();
+		for( int i=0;i<hashBytes.length;i++)
+		{
+			int val=((int)hashBytes[i])&0xff;
+			if(val<16)
 			{
 				hexValue.append("0");
 			}
