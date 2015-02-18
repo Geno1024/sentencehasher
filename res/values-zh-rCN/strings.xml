@@ -8,5 +8,5 @@
 	<string name="sha512">SHA-512：</string>
 	<string name="copied">已复制！</string>
 	<string name="avail">本机可用的哈希函数有：</string>
-	<string name="intro">本应用的唯一功能就是给句子计算哈希。\n你必须知道哈希函数是一种单向的函数。\n如果你看到下面的本机支持中有一些没有出现在上面的结果列表的话请告诉我。</string>
+	<string name="intro">本应用的唯一功能就是给句子计算哈希。\n你必须知道哈希函数是一种单向的函数。\n如果你看到下面的本机支持中有一些没有出现在上面的结果列表的话请告诉我(754097987@qq.com)。</string>
 </resources>
