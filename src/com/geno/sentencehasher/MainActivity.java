@@ -14,6 +14,7 @@ public class MainActivity extends Activity
 	public TextView md5,sha1,sha256,sha384,sha512,avail;
 	public TextView md5in,sha1in,sha256in,sha384in,sha512in,text;
 	public TextWatcher intext;
+	public long len;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -53,11 +54,12 @@ public class MainActivity extends Activity
 			@Override
 			public void afterTextChanged(Editable s)
 			{
-			md5in.setText(hash(text.getText().toString(),"MD5").toUpperCase());
-			sha1in.setText(hash(text.getText().toString(),"SHA1").toUpperCase());
-			sha256in.setText(hash(text.getText().toString(),"SHA256").toUpperCase());
-			sha384in.setText(hash(text.getText().toString(),"SHA384").toUpperCase());
-			sha512in.setText(hash(text.getText().toString(),"SHA512").toUpperCase());
+				md5in.setText(hash(text.getText().toString(),"MD5").toUpperCase());
+				sha1in.setText(hash(text.getText().toString(),"SHA1").toUpperCase());
+				sha256in.setText(hash(text.getText().toString(),"SHA256").toUpperCase());
+				sha384in.setText(hash(text.getText().toString(),"SHA384").toUpperCase());
+				sha512in.setText(hash(text.getText().toString(),"SHA512").toUpperCase());
+				avail.setText(getString(R.string.intro)+"\n"+getString(R.string.avail)+Security.getAlgorithms("MessageDigest")+"\nMessage length: "+len);
 			}
 		};
 
@@ -131,7 +133,7 @@ public class MainActivity extends Activity
 		}
 		catch(Exception e)
 		{
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 
 		char[] charArray=str.toCharArray();
@@ -141,8 +143,8 @@ public class MainActivity extends Activity
 		{
 			byteArray[i]=(byte)charArray[i];
 		}
+		len = byteArray.length;
 		byte[] hashBytes=hashcode.digest(byteArray);
-
 		StringBuffer hexValue=new StringBuffer();
 		for( int i=0;i<hashBytes.length;i++)
 		{
