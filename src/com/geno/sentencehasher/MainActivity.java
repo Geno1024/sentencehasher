@@ -11,8 +11,8 @@ import java.security.*;
 
 public class MainActivity extends Activity
 {
-	public TextView md5,sha1,sha256,sha384,sha512,avail;
-	public TextView md5in,sha1in,sha256in,sha384in,sha512in,text;
+	public TextView md5,sha1,sha224,sha256,sha384,sha512,avail;
+	public TextView md5in,sha1in,sha224in,sha256in,sha384in,sha512in,text;
 	public TextWatcher intext;
 	public long len;
 	@Override
@@ -29,6 +29,9 @@ public class MainActivity extends Activity
 
 		sha1=(TextView)findViewById(R.id.sha1);
 		sha1in=(TextView)findViewById(R.id.sha1in);
+
+		sha224=(TextView)findViewById(R.id.sha224);
+		sha224in=(TextView)findViewById(R.id.sha224in);
 
 		sha256=(TextView)findViewById(R.id.sha256);
 		sha256in=(TextView)findViewById(R.id.sha256in);
@@ -56,6 +59,7 @@ public class MainActivity extends Activity
 			{
 				md5in.setText(hash(text.getText().toString(),"MD5").toUpperCase());
 				sha1in.setText(hash(text.getText().toString(),"SHA1").toUpperCase());
+				sha224in.setText(hash(text.getText().toString(),"SHA224").toUpperCase());
 				sha256in.setText(hash(text.getText().toString(),"SHA256").toUpperCase());
 				sha384in.setText(hash(text.getText().toString(),"SHA384").toUpperCase());
 				sha512in.setText(hash(text.getText().toString(),"SHA512").toUpperCase());
@@ -82,6 +86,16 @@ public class MainActivity extends Activity
 				public void onClick(View p1)
 				{
 					clip(sha1in);
+				}
+			}
+		);
+		sha224in.setOnClickListener
+		(new OnClickListener()
+			{
+				@Override
+				public void onClick(View p1)
+				{
+					clip(sha224in);
 				}
 			}
 		);

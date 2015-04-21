@@ -51,6 +51,26 @@
 
 		<TextView
 			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/sha224"
+			android:id="@+id/sha224"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:ems="16"
+			android:id="@+id/sha224in"
+			android:layout_width="match_parent"
+			android:textIsSelectable="false"
+			android:typeface="monospace"/>
+
+	</TableRow>
+
+	<TableRow
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
 			android:text="@string/sha256"
 			android:id="@+id/sha256"
 			android:layout_width="wrap_content"/>

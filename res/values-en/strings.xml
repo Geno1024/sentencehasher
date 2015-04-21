@@ -3,6 +3,7 @@
 	<string name="app_name">Sentence Hasher</string>
 	<string name="md5">MD5:</string>
 	<string name="sha1">SHA-1:</string>
+	<string name="sha224">SHA-224:</string>
 	<string name="sha256">SHA-256:</string>
 	<string name="sha384">SHA-384:</string>
 	<string name="sha512">SHA-512:</string>
